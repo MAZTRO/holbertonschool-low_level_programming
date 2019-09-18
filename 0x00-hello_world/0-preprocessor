@@ -1,2 +1,2 @@
 #!/bin/bash
-gpp $CFILE > k
+gpp $CFILE > c
