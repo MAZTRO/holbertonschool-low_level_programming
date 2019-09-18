@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILt
+gcc -S $CFILE
