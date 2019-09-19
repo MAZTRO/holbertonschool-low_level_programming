@@ -6,14 +6,9 @@
  */
 int main(void)
 {
-int alphabet;
-  
-alphabet='a';
-
-while(alphabet<='z')
+for(int alpha = 'A'; alpha <= 'Z'; alpha++)
 {
-putchar(alphabet);
-alphabet++;
+putchar(tolower(alpha));
 }
 putchar("\n");
 return 0;
