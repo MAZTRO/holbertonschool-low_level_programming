@@ -14,7 +14,7 @@ putchar(al);
 for (AL = 'A'; AL <= 'Z'; AL++)
 {
 putchar(AL);
-} 
+}
 putchar('\n');
 return (0);
 }
