@@ -6,11 +6,10 @@
  */
 int main(void)
 {
-int x = 'a';
+char x = 'a';
 while (x <= 'z')
 {
 putchar(x);
 x++;
 }
 return (0);
-}
