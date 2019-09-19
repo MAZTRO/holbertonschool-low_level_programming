@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char alphabet;
+int alphabet;
   
 alphabet='a';
 
