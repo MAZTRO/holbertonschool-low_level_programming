@@ -6,7 +6,9 @@
  */
 int main(void)
 {
-for(char alpha = 'a'; alpha <= 'z'; alpha++)
+int alpha;
+
+for(alpha = 'a'; alpha <= 'z'; alpha++)
 {
 putchar(alpha);
 }
