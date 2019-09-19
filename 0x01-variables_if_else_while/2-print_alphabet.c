@@ -6,10 +6,15 @@
  */
 int main(void)
 {
-char x = 'a';
-while (x <= 'z')
+char alphabet;
+  
+alphabet='a';
+
+while(alphabet<='z')
 {
-putchar(x);
-x++;
+putchar(alphabet);
+alphabet++;
 }
-return (0);
+putchar("\n");
+return 0;
+}
