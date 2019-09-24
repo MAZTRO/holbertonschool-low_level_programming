@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- *my_function - This is a description
+ *main - Print "Holberton"
+ *Return: 0 when finish the code
  */
 int main(void)
 {
