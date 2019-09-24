@@ -1,9 +1,11 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ *_islower - Check the character.
  *
- * Return: Always 0.
+ *@c: Returned value
+ *
+ *Return: Always 0 if is lower or 1 is Higer.
  */
 int _islower(int c)
 {

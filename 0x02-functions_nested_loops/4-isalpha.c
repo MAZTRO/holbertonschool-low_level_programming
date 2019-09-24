@@ -1,9 +1,11 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ *_isalpha - check the code for Holberton School students.
  *
- * Return: Always 0.
+ *@c: Returned value
+ *
+ *Return: Always 0.
  */
 int _isalpha(int c)
 {
