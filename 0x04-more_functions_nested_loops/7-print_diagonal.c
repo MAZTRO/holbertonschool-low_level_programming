@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <unistd.h>
+
 /**
  *print_diagonal - Lol
  *@n: mas lol
