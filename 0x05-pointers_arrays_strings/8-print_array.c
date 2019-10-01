@@ -24,18 +24,5 @@ void print_array(int *a, int n)
 		}
 		x++;
 	}
-/*
- *	for (x = 0; x < n; x++)
- *	{
- *		if ((x + 1) == n)
- *		{
- *			printf("%d", a[x]);
- *		}
- *		else
- *		{
- *			printf("%d, ", a[x]);
- *		}
- *	}
- */
 	printf("\n");
 }
