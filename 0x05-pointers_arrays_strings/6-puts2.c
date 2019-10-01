@@ -10,10 +10,10 @@ void puts2(char *str)
 	int x, y;
 
 	y = 0;
-	
+
 	for (x = 0; str[x]; x++)
 	{
-		
+
 	}
 	while (str[x] < y)
 	{
