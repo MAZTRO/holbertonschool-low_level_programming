@@ -14,7 +14,7 @@ void print_rev(char *s)
 		/* Nothing */
 	}
 
-	while (a-- >= 0)
+	while (a-- > 0)
 	{
 		_putchar(s[a]);
 	}
