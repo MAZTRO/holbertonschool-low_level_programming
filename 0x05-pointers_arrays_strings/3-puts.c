@@ -2,7 +2,7 @@
 
 /**
  *_puts - lalala
- *@*str: lol
+ *@str: lol
  */
 
 void _puts(char *str)
