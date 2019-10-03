@@ -11,19 +11,19 @@ int _strcmp(char *s1, char *s2)
 {
 	int x, y;
 
-	for (x = 0; s1[x] != '\0'; x++)
+	while (s1 && s2)
 	{
-		for (y = 0; s2[y] != '\0'; y++)
+		if (*s1 != * *s2)
 		{
-			if (s1[x] == s2[y])
-			{
-				return (0);
-			}
-			else
-			{
-				return (s1[x] - s2[y]);
-			}
+			x = *s1 - *s2;
+			return (x);
 		}
+		s1++;
+		s2++;
 	}
-	return (0);
+
+	if (*s1 == *s2)
+	{
+		return (0);
+	}
 }
