@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strncat - check the code for Holberton School students.
+ * @dest: lol
+ * @src: lol
+ * @n: lol
  * Return: Always 0.
  */
 
