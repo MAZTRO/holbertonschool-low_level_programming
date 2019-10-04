@@ -17,16 +17,12 @@ char *string_toupper(char *c)
 
 	}
 
-	y = 0;
-
-	for (y < x)
+	for (y = 0; y < x; y++)
 	{
 		if (c[y] >= 97 && c[y] <= 122)
 		{
 			c[y] = (c[y] - 32);
 		}
-
-		y++;
 	}
 
 	return (c);
