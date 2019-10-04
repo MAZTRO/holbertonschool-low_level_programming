@@ -1,7 +1,9 @@
 #ifndef HEADER_FILE_NAME
 #define HEADER_FILE_NAME
 
-char *cap_string(char *);
+char *rot13(char *);
+char *leet(char *z);
+char *cap_string(char *z);
 char *string_toupper(char *);
 void reverse_array(int *a, int n);
 int _strcmp(char *s1, char *s2);
