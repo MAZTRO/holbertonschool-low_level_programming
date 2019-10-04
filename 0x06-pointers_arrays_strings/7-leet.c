@@ -8,7 +8,7 @@
 
 char *leet(char *z)
 {
-	int x, y;
+	//int x, y;
 	char a[2][10];
 
 	y = 0;
