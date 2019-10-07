@@ -21,5 +21,6 @@ char *_strchr(char *s, char c)
 		}
 	}
 
+	s += x;
 	return (s);
 }
