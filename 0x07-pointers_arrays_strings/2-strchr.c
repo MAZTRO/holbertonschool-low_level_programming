@@ -19,11 +19,8 @@ char *_strchr(char *s, char c)
 			s += x;
 			return (s);
 		}
-		else
-		{
-			s = 0;
-		}
 	}
 
+	s = 0;
 	return (s);
 }
