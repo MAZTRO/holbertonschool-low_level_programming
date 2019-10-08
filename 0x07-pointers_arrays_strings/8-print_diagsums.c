@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - function that locates a substring.
@@ -8,23 +9,18 @@
 
 void print_diagsums(int *a, int size)
 {
-	int x = 0, y, sum = 0, t = 0, d2 = 0;
+	int x, y, sum = 0, t = 0, d2 = 0;
 
-	while (x < size)
+	for (x = 0; x < size; x++)
 	{
 		for (y = 0; y < size; y++)
 		{
 			if (x == y)
-			{
-				sum += a[t];
-			}
+				sum = sum + a[t];
 			if ((x + y) == (size - 1))
-			{
-				d2 += a[t];
-			}
+				d2 = d2 + a[t];
 			t++;
 		}
-		x++;
 	}
 	printf("%d, %d\n", sum, d2);
 }
