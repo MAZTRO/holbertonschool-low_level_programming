@@ -1,29 +1,30 @@
 #include "holberton.h"
 
 /**
- * _strchr - check the code for Holberton School students.
- * @s: lol
- * @c: lol
- * Return: Always 0.
+ * *_strchr - function that  concatenates two strings.
+ * @s: The first string
+ * @c: The string concatenates
+ * Return: dest
  */
-
 char *_strchr(char *s, char c)
 {
+	int x = 0, t;
 
-	int x;
-
-	for (x = 0; s[x] != '\0'; x++)
+	while (s[x])
 	{
-		if (s[x] == c)
+		x++;
+	}
+	for (t = 0; t <= x; t++)
+	{
+		if (s[t] == c)
 		{
-			s += x;
+			s = (s + t);
 			break;
 		}
-		else if (s[x] == '\0')
+		else if (t == x)
 		{
 			s = 0;
 		}
 	}
-
 	return (s);
 }
