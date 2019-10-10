@@ -17,7 +17,7 @@ int equal(char *s1, char *s2, int wildC)
 	}
 	if (*s2 == '*')
 	{
-		return (recursive_check(s1, s2 + 1, ++wildC));
+		return (equal(s1, s2 + 1, ++wildC));
 	}
 	else if (*s1 != *s2 && wildC > 0)
 	{
@@ -25,19 +25,19 @@ int equal(char *s1, char *s2, int wildC)
 		{
 			return (0);
 		}
-		return (recursive_check(s1 + 1, s2, wildC));
+		return (equal(s1 + 1, s2, wildC));
 	}
 	else if (*s1 == *s2 && wildC == 0)
 	{
-		return (recursive_check(s1 + 1, s2 + 1, 0));
+		return (equal(s1 + 1, s2 + 1, 0));
 	}
 	else if (*s1 == *s2 && wildC > 0)
 	{
-		if (!recursive_check(s1 + 1, s2 + 1, 0))
+		if (!equal(s1 + 1, s2 + 1, 0))
 		{
-			return (recursive_check(s1 + 1, s2, wildC));
+			return (equal(s1 + 1, s2, wildC));
 		}
-		return (recursive_check(s1 + 1, s2 + 1, wildC));
+		return (equal(s1 + 1, s2 + 1, wildC));
 	}
 	else if (*s1 != *s2 && wildC == 0)
 	{
@@ -57,5 +57,5 @@ int equal(char *s1, char *s2, int wildC)
 
 int wildcmp(char *s1, char *s2)
 {
-	return (recursive_check(s1, s2, 0));
+	return (equal(s1, s2, 0));
 }
