@@ -1,23 +1,49 @@
 #include "holberton.h"
 
 /**
- * is_prime_number - check the code for Holberton School students.
- * @n: The prime
- * Return: Always 0.
+ * Prm - function that  concatenates two strings.
+ * @num: The first string
+ * @i: The string concatenates
+ * Return: dest
+ */
+
+int Prm(int num, int i)
+{
+	if (i == 1)
+	{
+		return (1);
+	}
+	else
+	{
+		if (num % i == 0)
+		{
+			return (0);
+		}
+		else
+		{
+			return (Prm(num, i - 1));
+		}
+	}
+}
+/**
+ * is_prime_number - function that  concatenates two strings.
+ * @n: The first string
+ * Return: dest
  */
 
 int is_prime_number(int n)
 {
-	int x;
+	int i = n / 2;
 
-	if (n <= 1)
+	if (n < 0)
 	{
 		return (0);
 	}
-	else if (n >= 2 && n / x == 1)
+	if (n == 1)
 	{
-		return (1);
+		return (0);
 	}
-	x++;
-	is_prime_number(n);
+
+	i = Prm(n, i);
+	return (i);
 }
