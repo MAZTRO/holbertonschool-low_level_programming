@@ -13,8 +13,6 @@ int main(int argc, char *argv[])
 	int add, count1, count2;
 	char *A;
 
-	add = 0;
-
 	for (count1 = 1; count1 < argc; count1++)
 	{
 
