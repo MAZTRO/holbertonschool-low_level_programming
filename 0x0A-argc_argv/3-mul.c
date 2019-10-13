@@ -10,20 +10,15 @@
 
 int main(int argc, char *argv[])
 {
-	int count, mult;
+	int mult;
 
-	if (argc > 1)
+	if (argc > 2)
 	{
-		for (count = 1; count < argc; count++)
-		{
-			mult = atoi(argv[count]) * atoi(argv[count - 1]);
-		}
+			mult = atoi(argv[1]) * atoi(argv[2]);
 			printf("%d\n", mult);
+			return (0);
 	}
 
-	if (argc <= 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
+	printf("Error\n");
+	return (1);
 }
