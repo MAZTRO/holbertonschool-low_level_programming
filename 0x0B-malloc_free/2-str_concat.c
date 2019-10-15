@@ -14,24 +14,13 @@ char *str_concat(char *s1, char *s2)
 	int x, y, size, concat, concat2;
 	char *Arr_concat;
 
-	if (*s1 == NULL && *s2 == NULL)
-	{
-		*s1 = "";
-		*s2 = "";
-	}
 
 	for (x = 0; s1[x] != '\0'; x++)
-	{
-		/* count the "longitud" of s1 */
-	}
 	for (y = 0; s2[y] != '\0'; y++)
-	{
-		/* Count the length of s2 */
-	}
 
 	size = x + y;
 
-	Arr_concat = malloc(sizeof(char) * size + 1);
+	Arr_concat = malloc(sizeof(char) * (size + 1));
 
 	if (Arr_concat == NULL && size == 0)
 	{
