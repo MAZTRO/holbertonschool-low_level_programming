@@ -31,10 +31,12 @@ char *str_concat(char *s1, char *s2)
 	for (concat = 0; concat < x; concat++)
 		Arr_concat[concat] = s1[concat];
 
-	for (concat2 = 0; concat2 <= y; concat2++)
+	concat2 = concat;
+
+	for (concat = 0; concat <= y; concat++)
 	{
-		Arr_concat[concat] = s2[concat2];
-		concat++;
+		Arr_concat[concat2] = s2[concat];
+		concat2++;
 	}
 
 	return (Arr_concat);
