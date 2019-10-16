@@ -10,7 +10,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int x, y, size, concat, concat2;
+	int x = 0, y = 0, size, concat, concat2;
 	char *Arr_concat;
 
 	if (s1 == NULL)
@@ -18,12 +18,12 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (x = 0; s1[x]; x++)
-	for (y = 0; s2[y]; y++)
+	while (s1[x])
+		x++;
+	while (s2[y])
+		y++;
 
-	size = x + (y + 1);
-
-	Arr_concat = malloc(sizeof(char) * size);
+	Arr_concat = malloc(sizeof(char) * (x + (y + 1));
 
 	if (Arr_concat == NULL)
 		return (NULL);
