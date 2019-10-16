@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -27,14 +26,10 @@ char *str_concat(char *s1, char *s2)
 	Arr_concat = malloc(sizeof(char) * (size));
 
 	if (Arr_concat == NULL)
-	{
 		return (NULL);
-	}
 
 	for (concat = 0; concat < x; concat++)
-	{
 		Arr_concat[concat] = s1[concat];
-	}
 
 	for (concat2 = 0; concat2 <= y; concat2++)
 	{
