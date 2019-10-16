@@ -39,9 +39,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		Arr_concat[concat] = s1[concat];
 	}
-	for (concat2 = 0; concat2 < size; concat2++)
+	for (concat2 = 0; concat2 < size - 1; concat2++)
 	{
 		Arr_concat[x + concat2] = s2[concat2];
+		if (Arr_concat == '\0')
+		{
+			Arr_concat = '\0';
+		}
 	}
 
 	return (Arr_concat);
