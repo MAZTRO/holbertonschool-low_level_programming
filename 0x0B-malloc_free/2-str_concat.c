@@ -31,14 +31,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (concat = 0; s1[concat] != '\0'; concat++)
+	for (concat = 0; concat < x; concat++)
 	{
 		Arr_concat[concat] = s1[concat];
 	}
 
-	for (concat2 = 0; concat2 <= y + 1; concat2++)
+	for (concat2 = 0; concat2 <= y; concat2++)
 	{
-		Arr_concat[concat + concat2] = s2[concat2];
+		Arr_concat[concat++] = s2[concat2];
 	}
 
 	return (Arr_concat);
