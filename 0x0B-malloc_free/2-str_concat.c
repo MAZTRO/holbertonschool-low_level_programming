@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 
 	Arr_concat = malloc(sizeof(char) * (size));
 
-	if (Arr_concat == NULL)
+	if ((Arr_concat == NULL) || (s1 == "" || s2 == ""))
 	{
 		return (NULL);
 	}
@@ -43,8 +43,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		Arr_concat[x + concat2] = s2[concat2];
 	}
-
-	Arr_concat[concat2 + 1] = '\0';
 
 	return (Arr_concat);
 }
