@@ -14,7 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
 	unsigned int FirstString, concat, concat_2;
-	char * Res;
+	char *Res;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -25,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	}
 
-	Res = malloc(sizeof(char) * (FirstString + (n +1)));
+	Res = malloc(sizeof(char) * (FirstString + (n  + 1)));
 
 	if (Res == NULL)
 		return (NULL);
