@@ -48,6 +48,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy((*trosky).owner, owner);
 		(*trosky).owner[j] = '\0';
 	(*trosky).age = age;
-	
+
 	return (trosky);
 }
