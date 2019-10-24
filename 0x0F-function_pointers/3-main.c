@@ -8,6 +8,8 @@
 
 int main(int argc, char *argv[])
 {
+	int total;
+
 	if (atoi(argv) != 4)
 	{
 		printf("Error\n");
@@ -26,5 +28,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", ;
+	printf("%d\n", total);
+
 }
