@@ -1,8 +1,9 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - Get the operators
- * @s: the operator
+ * main - Principal function
+ * @argc: count the arguments
+ * @argv: the arguments
  * Return: the function of operators
  */
 
@@ -20,7 +21,8 @@ int main(int argc, char *argv[])
 	operator = *argv[2];
 	dir_oper = argv[2];
 
-	if ((operator != '+' && operator != '-' && operator != '*' && operator != '/' && operator != '%') || dir_oper[1] != '\0')
+	if ((operator != '+' && operator != '-' && operator != '*'
+	 && operator != '/' && operator != '%') || dir_oper[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
