@@ -35,6 +35,7 @@ void print_all(const char * const format, ...)
 			printf("%f%s", (float)va_arg(my_anything, double), separator);
 			break;
 		case 's':
+			prints = va_arg(my_anything, char*);
 			if (prints == NULL)
 			{
 				prints = ("(nil)");
