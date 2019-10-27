@@ -9,11 +9,6 @@
 
 void print_all(const char * const format, ...)
 {
-	if (format == '\0')
-	{
-		return;
-	}
-
 	va_list my_anything;
 	int x = 0;
 	char *prints = NULL;

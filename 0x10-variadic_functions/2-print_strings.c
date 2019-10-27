@@ -15,11 +15,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		separator = "";
 	}
 
-	if (n == 0)
-	{
-		return;
-	}
-
 	va_list myprint;
 	char *prints;
 	unsigned int x = 0;
