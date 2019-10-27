@@ -11,9 +11,8 @@ void print_all(const char * const format, ...)
 	va_list my_anything;
 	int x = 0;
 	char *prints = NULL;
-	
-	va_start(my_anything, format);
 
+	va_start(my_anything, format);
 	while (format[x] != '\0')
 	{
 		switch (format[x])
@@ -44,7 +43,6 @@ void print_all(const char * const format, ...)
 		{
 			printf(", ");
 		}
-
 		x++;
 	}
 	va_end(my_anything);
