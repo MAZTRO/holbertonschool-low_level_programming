@@ -11,21 +11,21 @@ void print_all(const char * const format, ...)
 	va_list my_anything;
 	int x = 0;
 	char *prints = NULL;
-
+	
 	va_start(my_anything, format);
 
 	while (format[x] != '\0')
 	{
-		switch (format[x] != '\0')
+		switch (format[x])
 		{
 		case 'c':
-			printf("%c", (char)va_arg(my_anything, int));
+			printf("%c", va_arg(my_anything, int));
 			break;
 		case 'i':
-			printf("%i", va_arg(my_anything, int));
+			printf("%d", va_arg(my_anything, int));
 			break;
 		case 'f':
-			printf("%f", (float)va_arg(my_anything, double));
+			printf("%f", va_arg(my_anything, double));
 			break;
 		case 's':
 			prints = va_arg(my_anything, char*);
@@ -34,6 +34,7 @@ void print_all(const char * const format, ...)
 				prints = ("(nil)");
 			}
 			printf("%s", prints);
+			break;
 
 		default:
 			break;
@@ -44,7 +45,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		}
 
-		x += 1;
+		x++;
 	}
 	va_end(my_anything);
 	putchar('\n');
