@@ -27,16 +27,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (prints == NULL)
 		{
-			prints = "(nil)";
+			printf("(nil)");
 		}
+
 		printf("%s", prints);
 
 		if (separator != NULL && (x + 1) != n)
 		{
 			printf("%s", separator);
 		}
-		x += 1;
+		x++;
 	}
 	va_end(myprint);
-	printf("\n");
+	putchar('\n');
 }
