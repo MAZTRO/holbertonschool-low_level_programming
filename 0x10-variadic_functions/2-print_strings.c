@@ -9,14 +9,11 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	if (separator == NULL)
-	{
-		separator = "";
-	}
-
 	va_list myprint;
 	char *prints;
-	unsigned int x = 0;
+	unsigned int x;
+
+	x = 0;
 
 	va_start(myprint, n);
 
@@ -28,8 +25,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-
-		printf("%s", prints);
+		else
+		{
+			printf("%s", prints);
+		}
 
 		if (separator != NULL && x < (n - 1))
 		{
