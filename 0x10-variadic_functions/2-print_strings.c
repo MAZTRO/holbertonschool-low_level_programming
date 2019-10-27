@@ -31,15 +31,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		printf("%s", prints);
 
-		if (x == (n - 1))
-		{
-			printf("\n");
-		}
-		else
+		if (separator != NULL && (x + 1) != n)
 		{
 			printf("%s", separator);
 		}
 		x += 1;
 	}
 	va_end(myprint);
+	printf("\n");
 }
