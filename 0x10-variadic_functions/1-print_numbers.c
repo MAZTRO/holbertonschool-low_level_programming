@@ -14,7 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		separator = "";
 	}
-	
+
 	va_list myprint;
 	int prints = 0;
 	unsigned int x = 0;
@@ -30,7 +30,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d", prints);
 		}
-		x += 1;
+		x++;
 	}
+	va_end(myprint);
 	putchar('\n');
 }

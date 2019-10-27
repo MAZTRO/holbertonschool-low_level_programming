@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "variadic_functions.h"
 
 /**
@@ -17,7 +16,7 @@ void print_all(const char * const format, ...)
 
 	while (format[x] != '\0')
 	{
-		switch (format[x])
+		switch (format[x] != '\0')
 		{
 		case 'c':
 			printf("%c", (char)va_arg(my_anything, int));
