@@ -38,7 +38,8 @@ void print_all(const char * const format, ...)
 		default:
 			break;
 		}
-		if (format[x + 1] != '\0' && (format[x] == 'c' || format[x] == 'i' || format[x] == 'f' || format[x] == 's'))
+		if (format[x + 1] == '\0' && (format[x] == 'c' || format[x] == 'i'
+		 || format[x] == 'f' || format[x] == 's'))
 		{
 			printf(", ");
 		}
@@ -46,5 +47,5 @@ void print_all(const char * const format, ...)
 		x += 1;
 	}
 	va_end(my_anything);
-	printf("\n");
+	putchar('\n');
 }
