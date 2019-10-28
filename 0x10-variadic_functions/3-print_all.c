@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "variadic_functions.h"
 
 /**
@@ -9,29 +8,23 @@
 
 void print_all(const char * const format, ...)
 {
-	if (format == '\0')
-	{
-		return;
-	}
-
 	va_list my_anything;
 	int x = 0;
 	char *prints = NULL;
 
 	va_start(my_anything, format);
-
 	while (format[x] != '\0')
 	{
 		switch (format[x])
 		{
 		case 'c':
-			printf("%c", (char)va_arg(my_anything, int));
+			printf("%c", va_arg(my_anything, int));
 			break;
 		case 'i':
-			printf("%i", va_arg(my_anything, int));
+			printf("%d", va_arg(my_anything, int));
 			break;
 		case 'f':
-			printf("%f", (float)va_arg(my_anything, double));
+			printf("%f", va_arg(my_anything, double));
 			break;
 		case 's':
 			prints = va_arg(my_anything, char*);
@@ -40,17 +33,18 @@ void print_all(const char * const format, ...)
 				prints = ("(nil)");
 			}
 			printf("%s", prints);
+			break;
 
 		default:
 			break;
 		}
-		if (format[x + 1] != '\0' && (format[x] == 'c' || format[x] == 'i' || format[x] == 'f' || format[x] == 's'))
+		if (format[x + 1] != '\0' && (format[x] == 'c' || format[x] == 'i'
+		 || format[x] == 'f' || format[x] == 's'))
 		{
 			printf(", ");
 		}
-
-		x += 1;
+		x++;
 	}
 	va_end(my_anything);
-	printf("\n");
+	putchar('\n');
 }
