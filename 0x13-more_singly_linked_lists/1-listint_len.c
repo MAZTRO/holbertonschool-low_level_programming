@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint - writes the character c to stdout
+ * listint_len - writes the character c to stdout
  * @h: The character to print
  * Return: On success 1.
  */
