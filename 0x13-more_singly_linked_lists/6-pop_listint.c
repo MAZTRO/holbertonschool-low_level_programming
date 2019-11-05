@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 - writes the character c to stdout
+ * pop_listint - writes the character c to stdout
  * @head: The character to print
  * Return: list
  */
