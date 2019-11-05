@@ -14,6 +14,8 @@ void free_listint2(listint_t **head)
 	}
 	listint_t *cpy = NULL;
 
+	cpy = *head;
+
 	for (; *head != NULL;)
 	{
 		cpy = (*cpy).next;
