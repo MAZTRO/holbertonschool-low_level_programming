@@ -8,16 +8,17 @@
 
 void free_listint2(listint_t **head)
 {
-	if (*head != NULL || head != NULL)
+	if (head == NULL)
 	{
-		listint_t *cpy = NULL;
-
-		for (; *head != NULL;)
-		{
-			cpy = (**head).next;
-			free(*head);
-			*head = cpy;
-		}
-		head = NULL;
+		return;
 	}
+	listint_t *cpy = NULL;
+
+	for (; *head != NULL;)
+	{
+		cpy = (*cpy).next;
+		free(*head);
+		*head = cpy;
+	}
+	head = NULL;
 }
