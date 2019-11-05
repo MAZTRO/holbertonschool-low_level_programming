@@ -3,6 +3,7 @@
 /**
  * get_nodeint_at_index - writes the character c to stdout
  * @head: The character to print
+ * @index: lol
  * Return: list
  */
 

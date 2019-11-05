@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - writes the character c to stdout
+ * sum_listint - writes the character c to stdout
  * @head: The character to print
  * Return: list
  */
