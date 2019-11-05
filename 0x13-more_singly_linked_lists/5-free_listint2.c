@@ -14,11 +14,10 @@ void free_listint2(listint_t **head)
 
 		for (; *head != NULL;)
 		{
-			cpy = *head;
-			*head = (*head)->next;
-			free(cpy);
+			cpy = (**head).next;
+			free(head);
+			*head = cpy;
 		}
-		free(*head);
 		*head = NULL;
 	}
 }
