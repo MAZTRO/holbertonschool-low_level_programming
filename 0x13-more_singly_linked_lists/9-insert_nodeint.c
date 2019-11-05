@@ -23,26 +23,27 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		}
 		(*new_node).n = n;
+		prev_node = *head;
 
 		if (idx == 0)
 		{
 			new_node->next = *head;
 			*head = new_node;
 		}
-
-		prev_node = *head;
-
-		while (prev_node != NULL)
+		else
 		{
-			if ((count + 1) == idx)
+			while (prev_node != NULL)
 			{
-				next_node = prev_node->next;
-				prev_node->next = new_node;
-				(*new_node).next = next_node;
-				return (new_node);
+				if ((count + 1) == idx)
+				{
+					next_node = prev_node->next;
+					prev_node->next = new_node;
+					(*new_node).next = next_node;
+					return (new_node);
+				}
+				prev_node = prev_node->next;
+				count++;
 			}
-			prev_node = prev_node->next;
-			count++;
 		}
 	}
 	return (NULL);
