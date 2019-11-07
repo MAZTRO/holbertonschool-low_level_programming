@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_binary - check the code for Holberton School students.
+ * get_bit - check the code for Holberton School students.
  * @n: uint.
+ * @index: lol
  * Return: Always 0.
  */
 
