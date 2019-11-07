@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * my_pow - check the code for Holberton School students.
