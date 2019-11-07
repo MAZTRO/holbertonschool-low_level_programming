@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _pow - check the code for Holberton School students.
+ * my_pow - check the code for Holberton School students.
  * @x: First Int
  * @y: Secind int
  * Return: Always 0.
