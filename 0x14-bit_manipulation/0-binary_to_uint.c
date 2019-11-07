@@ -65,11 +65,11 @@ unsigned int binary_to_uint(const char *b)
 			{
 				return (0);
 			}
-			total += binary * my_pow(2, len);
+			total += binary * my_pow(2, (len - 1));
 			len--;
 			count_str++;
 		}
-		return (total / 2);
+		return (total);
 	}
 	return (0);
 }
