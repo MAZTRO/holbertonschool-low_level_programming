@@ -8,7 +8,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int count_str = 0, binary = 0, len;
+	int count_str = 0, binary, len;
 	unsigned int total = 0;
 
 	if (b != NULL)
@@ -18,7 +18,11 @@ unsigned int binary_to_uint(const char *b)
 
 		while (b[count_str] != '\0')
 		{
-			if (b[count_str] == 49)
+			if (b[count_str] == 48)
+			{
+				binary = 0;
+			}
+			else if (b[count_str] == 49)
 			{
 				binary = 1;
 			}
@@ -26,7 +30,7 @@ unsigned int binary_to_uint(const char *b)
 			{
 				return (0);
 			}
-			total += binary * pow(2, len);
+			total += binary * _pow(2, len);
 			len--;
 			count_str++;
 		}
