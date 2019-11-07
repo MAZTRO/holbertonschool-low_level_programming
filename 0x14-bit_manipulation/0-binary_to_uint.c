@@ -1,6 +1,40 @@
 #include "holberton.h"
 
 /**
+ * _pow - check the code for Holberton School students.
+ * @x: First Int
+ * @y: Secind int
+ * Return: Always 0.
+ */
+
+unsigned int my_pow(int x, int y)
+{
+	int temp;
+
+	if (y == 0)
+	{
+		return (1);
+	}
+	else if (y < 0)
+	{
+		return (-1);
+	}
+	else
+	{
+		temp = my_pow(x, y / 2);
+
+		if (y % 2 == 0)
+		{
+			return (temp * temp);
+		}
+		else
+		{
+			return (x * temp * temp);
+		}
+	}
+}
+
+/**
  * binary_to_uint - check the code for Holberton School students.
  * @b: binary number.
  * Return: Always 0.
@@ -8,13 +42,13 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int count_str = 0, binary, len;
-	unsigned int total = 0;
+	int count_str = 0, len;
+	unsigned int total = 0, binary;
 
 	if (b != NULL)
 	{
 		for (len = 0; b[len] != '\0'; len++)
-		;
+		{}
 
 		while (b[count_str] != '\0')
 		{
@@ -30,7 +64,7 @@ unsigned int binary_to_uint(const char *b)
 			{
 				return (0);
 			}
-			total += binary * _pow(2, len);
+			total += binary * my_pow(2, len);
 			len--;
 			count_str++;
 		}
