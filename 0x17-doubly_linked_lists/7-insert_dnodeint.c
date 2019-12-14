@@ -1,6 +1,24 @@
 #include "lists.h"
 
 /**
+ * len_list - returns the number of elements in a linked list.
+ * @h: The list to count.
+ * Return: The count.
+ */
+
+unsigned int len_list(const dlistint_t *h)
+{
+	unsigned int Count = 0;
+
+	while (h != NULL)
+	{
+		Count++;
+		h = h->next;
+	}
+	return (Count);
+}
+
+/**
  * get_node_at_index - get the node expected listint_t list
  * @head: pointer to head of list
  * @index: Place of a node to return
@@ -52,7 +70,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		return (add_dnodeint(h, n));
 	}
-	else if (count == idx)
+	else if (len_list(*h) == idx)
 	{
 		return (add_dnodeint_end(h, n));
 	}
