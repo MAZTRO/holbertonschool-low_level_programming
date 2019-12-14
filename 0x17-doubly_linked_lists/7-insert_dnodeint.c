@@ -39,7 +39,7 @@ dlistint_t *get_node_at_index(dlistint_t *head, unsigned int index)
 }
 
 /**
- * sinsert_dnodeint_at_index - inserts a new node to the listint_t list
+ * insert_dnodeint_at_index - inserts a new node to the listint_t list
  * @h: pointer to head of list
  * @idx: Position that we need.
  * @n: Value of the new NODE.

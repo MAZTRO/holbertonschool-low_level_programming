@@ -68,24 +68,21 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if ((**head).next == NULL && (**head).prev == NULL)
 		{
-			free(*head);
-			*head = NULL;
+			free(*head), *head = NULL;
 			return (1);
 		}
 		current = temp;
 		current = current->prev;
 		current->next = NULL;
 		temp->prev = NULL;
-		free(temp);
-		temp = current;
+		free(temp), temp = current;
 	}
 	else if (index < count)
 	{
 		current = get_node_at_index(*head, index);
 		temp = current->prev;
 		current = current->next;
-		free(temp->next);
-		temp->next = current;
+		free(temp->next), temp->next = current;
 		current->prev = temp;
 	}
 	return (1);
