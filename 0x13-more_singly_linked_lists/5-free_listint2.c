@@ -17,7 +17,7 @@ void free_listint2(listint_t **head)
 
 	cpy = *head;
 
-	for (; *head != NULL;)
+	while (*head != NULL)
 	{
 		cpy = (*cpy).next;
 		free(*head);
