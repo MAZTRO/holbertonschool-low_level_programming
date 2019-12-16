@@ -1,6 +1,24 @@
 #include "lists.h"
 
 /**
+ * len_list - returns the number of elements in a linked list.
+ * @h: The list to count.
+ * Return: The count.
+ */
+
+unsigned int len_list(const dlistint_t *h)
+{
+	unsigned int Count = 0;
+
+	while (h != NULL)
+	{
+		Count++;
+		h = h->next;
+	}
+	return (Count);
+}
+
+/**
  * get_node_at_index - get the node expected listint_t list
  * @head: pointer to head of list
  * @index: Place of a node to return
@@ -9,37 +27,31 @@
 
 dlistint_t *get_node_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *temp, *current;
-	size_t count = 0, len = 0;
+	dlistint_t *temp;
+	unsigned int count = 0;
 
 	temp = head;
-	current = head;
-	if (head != NULL && head->prev == NULL)
-	{
-		while (current != NULL)
-		{
-			current = current->next;
-			len++;
-		}
-	}
-	if (head != NULL)
-	{
+	if (head == NULL)
+	{return (NULL); }
 
-		while (temp->next != NULL && len >= index)
+	while (count <= index)
+	{
+		if (count == index)
 		{
-			if (index == count)
-			{
-				return (temp);
-			}
-			temp = temp->next;
-			count++;
+			return (temp);
 		}
+		if (temp->next == NULL)
+		{
+			return (NULL);
+		}
+		temp = temp->next;
+		count++;
 	}
 	return (NULL);
 }
 
 /**
- * sinsert_dnodeint_at_index - inserts a new node to the listint_t list
+ * insert_dnodeint_at_index - inserts a new node to the listint_t list
  * @h: pointer to head of list
  * @idx: Position that we need.
  * @n: Value of the new NODE.
@@ -48,31 +60,39 @@ dlistint_t *get_node_at_index(dlistint_t *head, unsigned int index)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *current, *new = NULL, *temp;
+	dlistint_t *new = NULL, *temp = NULL;
 	unsigned int count = 0;
 
+	if (h == NULL)
+	{return (NULL); }
 	temp = *h;
-	while (temp->next != NULL)
-	{temp = temp->next, count++; }
 	if (idx == 0)
 	{
-		new = add_dnodeint(h, n);
+		return (add_dnodeint(h, n));
 	}
-	else if (count == idx)
+	else if (len_list(*h) == idx)
 	{
-		new = add_dnodeint_end(h, n);
+		return (add_dnodeint_end(h, n));
 	}
-	else if (idx < count)
+	else
 	{
 		new = malloc(sizeof(dlistint_t));
 		if (new == NULL)
 		{return (NULL); }
-		current = get_node_at_index(*h, idx);
-		new->n = n;
-		current->prev->next = new;
-		new->prev = current->prev;
-		new->next = current;
-		return (new);
+		while (temp != NULL)
+		{
+			if (idx == count)
+			{
+				new->n = n;
+				new->next = temp;
+				new->prev = temp->prev;
+				temp->prev->next = new;
+				temp->prev = new;
+				return (new);
+			}
+			temp = temp->next;
+			count++;
+		}
 	}
 	return (NULL);
 }
