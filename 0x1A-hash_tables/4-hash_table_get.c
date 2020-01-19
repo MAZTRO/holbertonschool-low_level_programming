@@ -20,9 +20,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{return (NULL); }
 	cpy_head = ht->array[idx];
 
-	if (strcmp(key, cpy_head->key) == 0)
+	while (cpy_head)
 	{
-		return (cpy_head->value);
+		if (strcmp(key, cpy_head->key) == 0)
+		{
+			return (cpy_head->value);
+		}
+		cpy_head = cpy_head->next;
 	}
 	return (NULL);
 }

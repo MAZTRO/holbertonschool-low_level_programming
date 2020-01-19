@@ -10,28 +10,29 @@
 
 hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *new_node;
+	hash_node_t *new_node, *tmp;
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 	{return (NULL); }
 
-	if (*head == NULL)
+	tmp = *head;
+	while (tmp)
 	{
-		new_node->key = strdup(key);
-		new_node->value = strdup(value);
-		new_node->next = NULL;
-		*head = new_node;
-		return (*head);
+		if (strcmp(key, tmp->key) == 0)
+		{
+			tmp->value = NULL;
+			tmp->value = strdup(value);
+			return (*head);
+		}
+		tmp = tmp->next;
 	}
-	else
-	{
-		new_node->key = strdup(key);
-		new_node->value = strdup(value);
-		new_node->next = *head;
-		*head = new_node;
-		return (*head);
-	}
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = *head;
+	*head = new_node;
+	return (*head);
+
 	return (NULL);
 }
 

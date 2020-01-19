@@ -8,15 +8,16 @@
 
 void free_list(hash_node_t *head)
 {
-	hash_node_t *cpy = NULL;
+	hash_node_t *tmp;
 
-	for (; head != NULL;)
+	while (head != NULL)
 	{
-		cpy = head;
-		head = head->next;
-		free(cpy);
+		tmp = head->next;
+		free(head->key);
+		free(head->value);
+		free(head);
+		head  = tmp;
 	}
-	free(head);
 }
 
 /**
