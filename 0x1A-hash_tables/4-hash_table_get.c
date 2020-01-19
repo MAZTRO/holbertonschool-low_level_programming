@@ -9,20 +9,20 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    unsigned long int idx = 0;
-    hash_node_t *cpy_head;
+	unsigned long int idx = 0;
+	hash_node_t *cpy_head;
 
-    if ((strcmp(key, "\0") == 0) || (ht == NULL) || (key == NULL))
-    {return (NULL); }
+	if ((strcmp(key, "\0") == 0) || (ht == NULL) || (key == NULL))
+	{return (NULL); }
 
-    idx = key_index((unsigned char *)key, ht->size);
-    if (ht->array[idx] == NULL)
-    {return (NULL); }
-    cpy_head = ht->array[idx];
+	idx = key_index((unsigned char *)key, ht->size);
+	if (ht->array[idx] == NULL)
+	{return (NULL); }
+	cpy_head = ht->array[idx];
 
-    if (strcmp(key, cpy_head->key) == 0)
-    {
-        return (cpy_head->value);
-    }
-    return (NULL);
+	if (strcmp(key, cpy_head->key) == 0)
+	{
+		return (cpy_head->value);
+	}
+	return (NULL);
 }
