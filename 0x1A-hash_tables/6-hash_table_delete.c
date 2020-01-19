@@ -28,23 +28,25 @@ void free_list(hash_node_t *head)
 
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *tmp;
+	hash_node_t *cpy, *tmp;
 	unsigned long int count = 0;
 
 	if (ht != NULL)
 	{
 		while (count < ht->size)
 		{
-			tmp = ht->array[count];
-			if (tmp != NULL)
+			cpy = ht->array[count];
+			while (cpy)
 			{
-				free_list(tmp);
-				tmp = NULL;
+				tmp = cpy;
+				cpy = cpy->next;
+				free(tmp->key);
+				free(tmp->value);
+				free(tmp);
 			}
 			count++;
 		}
 		free(ht->array);
 		free(ht);
-		ht = NULL;
 	}
 }

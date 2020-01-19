@@ -12,28 +12,27 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *new_node, *tmp;
 
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
-	{return (NULL); }
-
 	tmp = *head;
 	while (tmp)
 	{
 		if (strcmp(key, tmp->key) == 0)
 		{
-			tmp->value = NULL;
+			free(tmp->value);
 			tmp->value = strdup(value);
 			return (*head);
 		}
 		tmp = tmp->next;
 	}
+
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{return (NULL); }
+
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = *head;
 	*head = new_node;
 	return (*head);
-
-	return (NULL);
 }
 
 /**
