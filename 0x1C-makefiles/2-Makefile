@@ -11,11 +11,4 @@ NAME = holberton
 
 # This rule compiles the files to make the executable.
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) m.h -o $(NAME)
-
-main.o: main.c m.h
-	$(CC) -c main.c
-
-holberton.o: holberton.c m.h
-	$(CC) -c holberton.c
-
+	$(CC) $(OBJ) m.h -o $(NAME)
