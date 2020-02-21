@@ -1,0 +1,10 @@
+# Variables.
+CC = gcc
+SRC = main.c holberton.c
+
+# Main Rule.
+all: holberton
+
+# This rule compiles the files to make the executable.
+holberton: main.c holberton.c m.h
+	gcc main.c holberton.c -o holberton
