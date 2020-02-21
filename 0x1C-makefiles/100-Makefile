@@ -15,7 +15,7 @@ all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -rf *~ *.swp $(NAME)
+	$(RM) -rf *~ $(NAME)
 
 oclean:
 	$(RM) -rf $(OBJ)
