@@ -8,7 +8,7 @@ def island_perimeter(grid):
     The lines commented with #,
     was used to illustrate the functionality
     """
-    # print("============\n")
+    print("============\n")
     lis = []
     per = 0
     g = grid
@@ -27,8 +27,7 @@ def island_perimeter(grid):
                         if (g[x][y - 1] == 1 and y > 0):
                             per -= 1
                         lis.append(per)
-            # print(g[x], " -- ", "#: {}".format(x),
-            # "Grid: {}".format(len(g)), "Grid[x]: {}".format(len(g[x])))
-    # print("\n============\n")
-    # print(lis)
+            print(g[x], " -- ", "#: {}".format(x), "Grid: {}".format(len(g)), "Grid[x]: {}".format(len(g[x])))
+    print("\n============\n")
+    print(lis)
     return (sum(lis))

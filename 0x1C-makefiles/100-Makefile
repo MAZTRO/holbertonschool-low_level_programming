@@ -11,8 +11,8 @@ NAME = holberton
 ################################################
 
 # This rule compiles the files to make the executable.
-all: $(OBJ) m.h
-	$(CC) -o $(NAME) $(OBJ)
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) -rf *~ $(NAME)
