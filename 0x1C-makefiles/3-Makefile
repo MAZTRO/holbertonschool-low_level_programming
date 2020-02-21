@@ -1,0 +1,26 @@
+.PHONY: all clean oclean fclean re
+################################################
+# Variables.
+
+CC = gcc
+CFLAGS = -g -Wall
+SRC = holberton.c main.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+RM = rm -f
+
+################################################
+
+# This rule compiles the files to make the executable.
+all: $(OBJ)
+	$(CC) $(OBJ) m.h -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean : clean oclean
+
+re: oclean all
