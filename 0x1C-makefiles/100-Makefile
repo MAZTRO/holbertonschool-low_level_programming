@@ -7,16 +7,15 @@ CFLAGS = -Wall -Werror -Wextra -pedantic -g
 SRC = holberton.c main.c
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
-RM = rm -f
 
 ################################################
 
 # This rule compiles the files to make the executable.
-all: $(OBJ)
-	$(CC) $(OBJ) m.h -o $(NAME)
+all: $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ *.swp $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
