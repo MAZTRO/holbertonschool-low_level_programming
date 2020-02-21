@@ -12,13 +12,13 @@ NAME = holberton
 
 # This rule compiles the files to make the executable.
 all: $(OBJ) m.h
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -f *~ *.swp $(NAME)
+	$(RM) -rf *~ *.swp $(NAME)
 
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) -rf $(OBJ)
 
 fclean : clean oclean
 
