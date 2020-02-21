@@ -13,7 +13,7 @@ RM = rm -f
 
 # This rule compiles the files to make the executable.
 all: $(OBJ)
-	$(CC) $(OBJ) m.h -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) m.h -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
